@@ -28,7 +28,7 @@ const ViewGame = () => {
     const handleDelete = async (gameId) => {
         try {
             await API.delete(`/videojuegos/${gameId}`);
-            const updatedGames = games.filter(game => game.id !== gameId);
+            const updatedGames = videoJuego.filter(game => game.id !== gameId);
             setJuego(updatedGames);
         } catch (error) {
             console.error("Error al borrar el videojuego", error);

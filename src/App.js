@@ -27,7 +27,7 @@ function App() {
       <Route path="" exact element={<PrivateRoute><Home/></PrivateRoute>}>
         <Route index path="/videojuegos" element={ <div><PrivateRoute><CheckBox/></PrivateRoute><PrivateRoute><ViewCarts/></PrivateRoute></div>}/>
         <Route path='/game/:id' element={<DetailGame/>} />
-        <Route paht='/about' element={<PrivateRoute><About/></PrivateRoute>}/>
+        <Route path='/about' element={<PrivateRoute><About/></PrivateRoute>}/>
         <Route path="/nuevo" element={<PrivateRoute><AddCartForm/></PrivateRoute>}/>
         <Route path="/editar" element={<PrivateRoute><EditCartForm/></PrivateRoute>}/>
       </Route>

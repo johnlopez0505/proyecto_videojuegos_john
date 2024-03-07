@@ -14,14 +14,14 @@ const VideoJuego = ({game,handleDelete}) => {
 
     const getCategoryNames = (juego) => {
       return juego.categoria.map((categoriaId) => {
-        const categoria = categorias.find((categoria) => categoria.id === categoriaId);
+        const categoria = categorias.find((categoria) => categoria.id == categoriaId);
         return categoria ? categoria.name : "Categoría no encontrada";
       });
     };
 
     const getPlataformaName = (juego) => {
       return juego.plataforma.map((plataformaId) => {
-        const plataformas = plataforma.find((plataforma) => plataforma.id === plataformaId);
+        const plataformas = plataforma.find((plataforma) => plataforma.id == plataformaId);
         return plataformas? plataformas.name : "Plataforma no encontrada";
       });
     }

@@ -16,7 +16,7 @@ function LoginForm() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/');
+      navigate('/videojuegos');
     }
     if (loginError) {
       setError(loginError);
