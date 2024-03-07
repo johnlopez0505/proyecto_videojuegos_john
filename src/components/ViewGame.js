@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import API from '../axios';
 import './ViewGame.css';
-import { useNavigate } from 'react-router-dom';
 import VideoJuego from './VideoJuego';
 import { useAuth } from '../context/AuthProvider';
 
 const ViewGame = () => {
-    const [games, setGames] = useState([]);
-    const navigate = useNavigate();
 
     const { videoJuego,search, setJuego , setVideoJuegosSeleccionados} = useAuth();
 
@@ -37,12 +34,10 @@ const ViewGame = () => {
 
    
 
-
-    const handleEdit = (game) => {
-        navigate('/editar', { state: game });
-    }
-
-    const results = !search ? videoJuego : videoJuego.filter((dato)=> dato.title.toLowerCase().includes(search.toLocaleLowerCase()));
+    const results = !search ? videoJuego : (videoJuego.filter((dato)=> 
+        dato.title.toLowerCase().includes(search.toLocaleLowerCase()) ||
+        dato.description.toLowerCase().includes(search.toLocaleLowerCase())));
+            
     
     return (
         

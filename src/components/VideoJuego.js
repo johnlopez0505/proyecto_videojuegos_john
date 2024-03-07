@@ -22,6 +22,7 @@ const VideoJuego = ({game,handleDelete}) => {
       });
     }
 
+   
 
     return(
         <div className="containerCard">
@@ -36,9 +37,7 @@ const VideoJuego = ({game,handleDelete}) => {
                   <p>Precio ${game.precio}€</p>
                   <p>La categoría es: {getCategoryNames(game).join(', ')}</p>
                   <p>La Plataforma es: {getPlataformaName(game).join(', ')}</p>
-                  {/* <p><a href="#openModal" onClick={handleClick}>Detalle Modal</a></p> */}
                   <button type='button' onClick={() => handleDelete(game.id)} className='button'>Borrar</button>
-                  {/* <Modal game={game} categorias={categorias} plataforma={plataforma}/> */}
               </div>
         </div>
     )

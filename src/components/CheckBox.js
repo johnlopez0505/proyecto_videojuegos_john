@@ -1,11 +1,11 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import '../components/CheckBox.css';
 import SearchComponent from '../components/SearchComponent';
 import { useAuth } from '../context/AuthProvider';
 const CheckBox = () => {
     
-   const {categorias,plataforma,videoJuego,categoriasSeleccionadas,
+   const {categorias,plataforma,categoriasSeleccionadas,
     plataformasSeleccionadas,videoJuegoSeleccionados,setCategoriasSeleccionadas
     ,setPlataformasSeleccionadas,setJuego} = useAuth();
 
@@ -46,7 +46,6 @@ const CheckBox = () => {
     };
 
     const filtrarVideoJuegos = () => {
-        // Filtrar videojuegos por categoría
         const videojuegosFiltrados = videoJuegoSeleccionados.filter(juego => 
             !juego.categoria.every(categoria => categoriasSeleccionadas.includes(categoria)
             && juego.plataforma.every(plataforma => plataformasSeleccionadas.includes(plataforma)))
@@ -54,7 +53,6 @@ const CheckBox = () => {
         setJuego(videojuegosFiltrados);
     }
 
-   
 
     return ( <div className="checkBox">
                 <p>Categorias</p>
