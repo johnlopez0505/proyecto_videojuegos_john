@@ -41,9 +41,9 @@ const ViewGame = () => {
     const handleEdit = (game) => {
         navigate('/editar', { state: game });
     }
-    console.log(videoJuego);
+
     const results = !search ? videoJuego : videoJuego.filter((dato)=> dato.title.toLowerCase().includes(search.toLocaleLowerCase()));
-    console.log(results);
+    
     return (
         
         <div className='containerGame'> 

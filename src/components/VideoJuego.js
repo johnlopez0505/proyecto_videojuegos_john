@@ -5,12 +5,8 @@ import { useAuth } from "../context/AuthProvider";
 
 const VideoJuego = ({game,handleDelete}) => {
   
-  // const [mostrarModal, setMostrarModal] = useState(false);
   const {categorias,plataforma} = useAuth();
 
-  // const handleClick = () => {
-  //   setMostrarModal(true);
-  // };
 
     const getCategoryNames = (juego) => {
       return juego.categoria.map((categoriaId) => {
@@ -26,12 +22,6 @@ const VideoJuego = ({game,handleDelete}) => {
       });
     }
 
-    // const delgame = async () => {
-    //   const response = await deleteBook(game);
-    //   if (!response.error) {
-    //     onDeleteBook(game);
-    //   }
-    // }
 
     return(
         <div className="containerCard">

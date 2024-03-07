@@ -13,7 +13,7 @@ function Home() {
   return (
     <div className="home">
       <header>
-        <h1>Video juegos</h1>
+        <h1>Video Juegos</h1>
       </header>
       <aside className="sidebar">
           <nav className='menuNav'>

@@ -7,6 +7,8 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0px 3px 3px 8px black;
+    margin-bottom: 100px;
+   
 }
 
 .form-container input,
@@ -21,7 +23,7 @@
 .form-container input:focus,
 .form-container textarea:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #77b68a;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
 }
 
@@ -30,7 +32,7 @@
 }
 
 .form-container button {
-    background-color: #007bff;
+    background-color: #436d5f;
     color: white;
     border: none;
     cursor: pointer;
@@ -38,5 +40,20 @@
 }
 
 .form-container button:hover {
-    background-color: #0056b3;
+    background-color: #184633;
+}
+
+.containerForm{
+
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    border: 3px solid rgb(101, 192, 136);
+    box-shadow: 1px 1px 10px 10px  rgb(114, 194, 146);
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+.form-container select{
+    margin-bottom: 20px;
 }
